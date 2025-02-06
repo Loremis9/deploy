@@ -1,0 +1,23 @@
+angular:
+  image: "ghcr.io/monrepo/angular-app:latest"
+  replicas: 1
+  service:
+    type: ClusterIP
+    port: 80
+
+fastapi:
+  image: "ghcr.io/monrepo/fastapi-app:latest"
+  replicas: 1
+  service:
+    type: ClusterIP
+    port: 8000
+  ingress:
+    enabled: true
+    host: api.example.com
+
+database:
+  image: "postgres:15"
+  user: "user"
+  password: "password"
+  dbname: "mydb"
+  storage: "5Gi"
