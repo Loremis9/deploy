@@ -1,12 +1,12 @@
 angular:
-  image: "ghcr.io/monrepo/angular-app:latest"
+  image: "ghcr.io/loremis9/angular-app:latest"
   replicas: 1
   service:
     type: ClusterIP
     port: 80
 
 fastapi:
-  image: "ghcr.io/monrepo/fastapi-app:latest"
+  image: "ghcr.io/loremis9/fastapi-app:latest"
   replicas: 1
   service:
     type: ClusterIP
